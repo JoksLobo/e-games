@@ -9,6 +9,7 @@ body {
     background-color: black;
     color: #fff;
     font-size: 16px;
+    overflow: hidden;
 }
 
 header {
@@ -20,6 +21,7 @@ header {
     align-items: center;
     grid-template-columns: 1fr 600px;
     gap: 10%;
+    z-index: 2;
 
     & h1 {
         width: 250px;
@@ -30,6 +32,43 @@ header {
         & ul {
             display: grid;
             grid-template-columns: repeat(3, 200px);
+        }
+    }
+}
+
+section {
+    background-image: radial-gradient(#FFB200, #D91656);
+    height: 100vh;
+    position: relative;
+
+    & .list {
+        width: 70vw;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+        & .item {
+            position: absolute;
+            inset: 0;
+
+            & .game-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 70%;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.arrows {
+    & button {
+        & img {
+            width: 100px;
         }
     }
 }
