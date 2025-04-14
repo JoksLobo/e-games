@@ -192,10 +192,10 @@ section {
 section {
 
     & .list {
-
+    --calculation: 1;
 
         & .item {
-            transform: translateX(100vh);
+            transform: translateX(cal(100vw * var(--calculation)));
             transition: 0.5s;
             opacity: 0;
             
@@ -213,7 +213,7 @@ section {
                 h2,
                 .description,
                 .information {
-                    transform: translateX(200px);
+                    transform: translateX(calc(200px * var(--calculation)));
                     transition: 0.7s;
                     transition-delay: 0.3s;
                     opacity: 0;
